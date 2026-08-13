@@ -196,7 +196,9 @@ function showResult(data){
 
     document.getElementById("grandTotal").textContent =
         data.grandTotal + " คะแนน";
-
+    
+document.getElementById("percentage").textContent =
+    Number(data.percentage).toFixed(2) + "%";
 
 
 
