@@ -777,7 +777,10 @@ html += `
 <td>ผลการสอบ</td>
 
 <td>
-อยู่ในเกณฑ์ "ดี"
+const percentage = (data.total / 130) * 100;
+
+document.getElementById("percentage").textContent =
+    percentage.toFixed(2) + "%";
 </td>
 
 </tr>
