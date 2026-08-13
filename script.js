@@ -11,7 +11,6 @@
 const API_URL =
 "https://script.google.com/macros/s/AKfycbxW4SVSRk7AkmMZtBynheuQoDrh0CbhppncmMX8NZadlen6-jLF28JlsiujwO4VVK5Y-g/exec";
 
-
 // ======================
 // ELEMENT
 // ======================
