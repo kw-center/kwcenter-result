@@ -199,34 +199,14 @@ function showResult(data){
 
 
 
-    // ==========================
-    // ผลสอบ
-    // ==========================
-
-    const resultStatus =
-        document.getElementById("resultStatus");
-
-    resultStatus.textContent =
-        data.result;
 
 
+   // ==========================
+// ร้อยละคะแนนรวม
+// ==========================
 
-    if(data.result==="ผ่าน"){
-
-        resultStatus.classList.remove("fail");
-
-        resultStatus.classList.add("pass");
-
-    }
-
-    else{
-
-        resultStatus.classList.remove("pass");
-
-        resultStatus.classList.add("fail");
-
-    }
-
+document.getElementById("percentage").textContent =
+    Number(data.percentage).toFixed(2) + "%";
 
 
     // ==========================
@@ -774,14 +754,9 @@ html += `
 
 <tr>
 
-<td>ผลการสอบ</td>
+<td>ร้อยละคะแนนรวม</td>
 
-<td>
-const percentage = (data.total / 130) * 100;
-
-document.getElementById("percentage").textContent =
-    percentage.toFixed(2) + "%";
-</td>
+<td>${document.getElementById("percentage").textContent}</td>
 
 </tr>
 
