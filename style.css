@@ -521,17 +521,6 @@ body{
 
 }
 
-.pass{
-
-    color:#16A34A !important;
-
-}
-
-.fail{
-
-    color:#DC2626 !important;
-
-}
 
 
 
@@ -909,6 +898,8 @@ footer{
     border-radius:18px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    display:none;
 
 }
 
