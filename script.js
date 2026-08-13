@@ -470,174 +470,175 @@ function printReport() {
 
 <style>
 
-body{
-
-    font-family:
-    "Sarabun",
-    sans-serif;
-
-    margin:40px;
-
-    color:#222;
-
+@page {
+    size: A4 portrait;
+    margin: 10mm;
 }
 
-.header{
-
-    text-align:center;
-
-    border-bottom:3px solid #1683D8;
-
-    padding-bottom:20px;
-
-    margin-bottom:30px;
-
+* {
+    box-sizing: border-box;
 }
 
-.logo{
-
-    width:90px;
-
-    margin-bottom:10px;
-
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-
-    margin:5px;
-
-    color:#1683D8;
-
+body {
+    font-family: "Sarabun", sans-serif;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.35;
 }
 
-h2{
+/* =========================
+   HEADER
+========================= */
 
-    margin:5px;
-
-    font-size:22px;
-
+.header {
+    text-align: center;
+    border-bottom: 2px solid #1683D8;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
 }
 
-.info{
-
-    margin-top:20px;
-
+.logo {
+    width: 65px;
+    margin-bottom: 3px;
 }
 
-.info table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
+h1 {
+    margin: 2px;
+    color: #1683D8;
+    font-size: 22px;
 }
 
-.info td{
-
-    padding:10px;
-
-    border:1px solid #CCC;
-
+h2 {
+    margin: 2px;
+    font-size: 17px;
 }
 
-.subject{
-
-    margin-top:25px;
-
+.header br {
+    line-height: 1;
 }
 
-.subject table{
+/* =========================
+   INFO
+========================= */
 
-    width:100%;
-
-    border-collapse:collapse;
-
+.info {
+    margin-top: 8px;
 }
 
-.subject th{
-
-    background:#1683D8;
-
-    color:white;
-
-    padding:10px;
-
+.info table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.subject td{
-
-    border:1px solid #CCC;
-
-    padding:10px;
-
+.info td {
+    padding: 6px 8px;
+    border: 1px solid #CCC;
 }
 
-.summary{
+/* =========================
+   SUBJECT
+========================= */
 
-    margin-top:30px;
-
+.subject {
+    margin-top: 12px;
 }
 
-.summary table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
+.subject table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.summary td{
-
-    border:1px solid #CCC;
-
-    padding:12px;
-
+.subject th {
+    background: #1683D8;
+    color: white;
+    padding: 7px;
 }
 
-.footer{
-
-    margin-top:70px;
-
-    display:flex;
-
-    justify-content:space-between;
-
+.subject td {
+    border: 1px solid #CCC;
+    padding: 7px;
 }
 
-.sign{
+/* =========================
+   SUMMARY
+========================= */
 
-    text-align:center;
-
-    width:250px;
-
+.summary {
+    margin-top: 12px;
 }
 
-.small{
-
-    margin-top:50px;
-
-    text-align:center;
-
-    color:#777;
-
-    font-size:13px;
-
+.summary table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.pass{
-
-    color:green;
-
-    font-weight:bold;
-
+.summary td {
+    border: 1px solid #CCC;
+    padding: 7px 8px;
 }
 
-.fail{
+/* =========================
+   FOOTER / SIGNATURE
+========================= */
 
-    color:red;
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    font-weight:bold;
+.sign {
+    text-align: center;
+    width: 220px;
+}
 
+.small {
+    margin-top: 15px;
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.pass {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+/* =========================
+   PRINT CONTROL
+========================= */
+
+.header,
+.info,
+.subject,
+.summary,
+.footer,
+.small {
+    page-break-inside: avoid;
+}
+
+table {
+    page-break-inside: avoid;
+}
+
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
 }
 
 </style>
